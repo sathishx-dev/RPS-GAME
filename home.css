@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 40px;
+  background: radial-gradient(circle at center, #0a0c23, #000c1c);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 40px;
+  color: #ffffff;
+  text-shadow: 0 0 15px #0091ff, 0 0 30px #0088ff, 0 0 50px #0066ff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+
+.main_card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #141f35;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 0 0 20px #00e0ff55, 0 0 40px #00aaff33;
+}
+
+.main_card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00e0ff99, 0 0 55px #00aaff66;
+}
+
+
+.background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, #0b3d91, #062b55);
+  z-index: 0;
+}
+
+
+.box {
+  position: absolute;
+  padding: 10px;
+  border-radius: 20px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+  z-index: 1;
+}
+
+.box2 {
+  width: 65%;
+  height: 70%;
+  bottom: -70%;
+  left: -55%;
+}
+
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon h1 {
+  font-size: 50px;
+  margin: 0;
+  filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.cool_card_logo {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00e0ff;
+  z-index: 1;
+}
+
+.main_card:hover .box {
+  bottom: -1px;
+  left: -1px;
+}
+
+.main_card:hover .cool_card_logo {
+  transform: translate(0, 0);
+  bottom: 20px;
+  right: 20px;
+}
+
+
+.output {
+  text-align: center;
+  margin-top: 30px;
+  background: rgba(0, 224, 255, 0.05);
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00e0ff44, 0 0 40px #00aaff22;
+  width: 300px;
+}
+
+.output p,
+.output h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #ffffff;
+  text-shadow: 0 0 8px #0088ff;
+}
+@media (max-width: 480px) {
+  body {
+    padding: 20px;             
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 28px;            
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .cards-container {
+    gap: 20px;                  
+    flex-direction: column;     
+    align-items: center;
+  }
+
+  .main_card {
+    width: 150px;              
+    height: 150px;
+    border-radius: 20px;
+  }
+
+  .icon h1 {
+    font-size: 36px;            
+  }
+
+  .cool_card_logo {
+    font-size: 18px;            
+  }
+
+  .output {
+    width: 90%;                
+    padding: 15px 20px;
+  }
+
+  .output p,
+  .output h2 {
+    font-size: 16px;           
+  }
+}

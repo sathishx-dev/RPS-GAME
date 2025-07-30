@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RPS GAME</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  
+   <h1>Rock Paper Scissors</h1>
+
+
+<div class="cards-container">
+  <div class="main_card" onclick="playGame('rock')">
+    <div class="background"></div>
+    <div class="cool_card_logo"><p>Rock</p></div>
+    <div class="box box2"><span class="icon"><h1>✊</h1></span></div>
+  </div>
+
+  <div class="main_card" onclick="playGame('paper')">
+    <div class="background"></div>
+    <div class="cool_card_logo"><p>Paper</p></div>
+    <div class="box box2"><span class="icon"><h1>✋</h1></span></div>
+  </div>
+
+  <div class="main_card" onclick="playGame('scissor')">
+    <div class="background"></div>
+    <div class="cool_card_logo"><p>Scissors</p></div>
+    <div class="box box2"><span class="icon"><h1>✌️</h1></span></div>
+  </div>
+</div>
+
+
+<div class="output">
+  <p id="player-choice">You chose: </p>
+  <p id="computer-choice">Computer chose: </p>
+  <h2 id="result">Result: </h2>
+</div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
